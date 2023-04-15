@@ -3,7 +3,6 @@
 import os
 import requests
 from datetime import datetime
-from imageproc import generate_image
 
 
 images_dir = "/var/www/power_monitoring/images/"
@@ -30,9 +29,7 @@ def download_image():
         os.unlink(latest_image_link)
     os.symlink(filepath, latest_image_link)
 
-    print("Image saved successfully!")
     return filepath
 
 
 filepath = download_image()
-generate_image(filepath)

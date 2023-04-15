@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os
 import cv2
 import numpy as np
@@ -91,4 +93,4 @@ def generate_image(filepath):
 
 
 if __name__ == '__main__':
-    generate_image("image.jpg")
+    generate_image("/var/www/power_monitoring/images/latest.jpg")
