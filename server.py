@@ -13,7 +13,7 @@ def get_image():
     if not os.path.exists(latest_image_link):
         return abort(404, "Latest image not found on this server.")
 
-    send_file(latest_image_link, mimetype='image/jpeg')
+    return send_file(latest_image_link, mimetype='image/jpeg')
 
 
 if __name__ == '__main__':
